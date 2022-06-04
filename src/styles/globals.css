@@ -1,0 +1,247 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../assets/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Akira Expanded';
+  src: url(../assets/fonts/Akira-Expanded-Demo.otf);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  background-size: cover;
+  background-color: #191919 !important;
+  background-image: url(../assets/images/Background.png);
+  top: 0;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.active-color {
+  color: #00FACE !important;
+}
+
+.navbar-container {
+  width: 100%;
+  padding: 0 60px;
+}
+
+.navbar {
+  height: 88px;
+  background-color: #22232E !important;
+  border-bottom: 1px solid #383A4A;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  margin-right: 0 !important;
+}
+
+.navbar-brand img {
+  width: 200px !important;
+}
+
+.navbar-menus {
+  margin-left: 145px;
+}
+
+.nav-item {
+  padding: 0 23px;
+}
+
+.nav-item a {
+  color: #888FA2;
+  font-size: 15px !important;
+  font-family: 'Montserrat';
+  letter-spacing: 1.2px;
+}
+
+.nav-item:hover a {
+  color: #00FACE !important;
+}
+
+.nav-icon {
+  width: 30px;
+  height: 21px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.nav-icon span:nth-child(1) {
+  top: 0px;
+}
+
+.nav-icon span:nth-child(2) {
+  top: 9px;
+}
+
+.nav-icon span:nth-child(3) {
+  top: 18px;
+}
+
+.nav-icon.open span:nth-child(1) {
+  top: 9px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.nav-icon.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.nav-icon.open span:nth-child(3) {
+  top: 9px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.wallet-connect {
+  border-radius: 50px;
+  width: 210px;
+  height: 40px;
+  background-color: #333742;
+  padding: 20px;
+}
+
+.wallet-connected {
+  background: #30B28C;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.wallet-address {
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  color: #888FA2;
+  font-family: 'Montserrat';
+  line-height: 0;
+}
+
+.wallet-address-clipboard {
+  cursor: pointer;
+}
+
+.wallet-profile {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.wallet-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tier-image {
+  width: 260px !important;
+  height: 260px !important;
+}
+
+.box-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 780px;
+  min-height: 375px;
+  background: radial-gradient(88.2% 115.64% at 53.47% 160.76%, #00face 0%, #292a34 100%);
+  border-radius: 10px;
+  z-index: 9999;
+  max-height: 100vh;
+}
+
+@media(max-width: 992px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    background: #22232E;
+    width: 100%;
+    left: 0px;
+    padding: 0 15px;
+    margin-left: 0;
+  }
+  .box-container {
+    margin: 15px;
+    width: calc(100% - 30px);
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 100px;
+    max-height: unset;
+    z-index: 10;
+    margin: 30px 0;
+  }
+}
+
+@media(max-width: 1560px) {
+  .nav-item {
+    padding: 0 15px;
+  }
+}
+
+@media(max-width: 992px) {
+  .navbar-container {
+    padding: 0 15px;
+  }
+
+  .nav-item {
+    padding: 0;
+  }
+
+  .wallet-connect-section {
+    margin-bottom: 20px;
+  }
+}

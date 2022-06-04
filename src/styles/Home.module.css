@@ -1,0 +1,14 @@
+.container {
+  height: calc(100vh - 88px);
+  margin-top: 88px;
+  margin-left: 80px;
+  padding: 1rem;
+  transition: 0.3s;
+}
+
+
+@media(max-width: 992px) {
+  .container {
+    margin-left: 0;
+  }
+}
